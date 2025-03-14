@@ -2,7 +2,7 @@
 
 
 void error(string word1, string word2, string msg) {
-    std::cerr << msg << ': ' << word1 << ', ' << word2 << std::endl;
+    std::cerr << msg << ": " << word1 << ", " << word2 << std::endl;
 }
 
 bool edit_distance_within(const std::string& str1, const std::string& str2, int d);

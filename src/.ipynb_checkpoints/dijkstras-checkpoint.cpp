@@ -12,6 +12,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
 
     vector<bool> visited(G.numVertices, false);
     vector<int> distances(G.numVertices, INF);
+    for (size_t i = 0; i < previous.size(); ++i) previous[i] = -1;
 
     auto compare = [](const Node& a, const Node& b) {return a.weight > b.weight;};
     priority_queue<Node, std::vector<Node>, decltype(compare)> pq(compare);

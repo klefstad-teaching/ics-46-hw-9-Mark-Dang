@@ -10,7 +10,7 @@ lib/dijkstras.o: src/dijkstras.cpp
 	g++ $(CXXFLAGS) -c src/dijkstras.cpp -o lib/dijkstras.o
 
 lib/ladder_main: src/ladder_main.cpp lib/ladder.o
-	g++ $(CXXFLAGS) src/ladder_main.cpp -o lib/ladder_main lib/dijkstras.o
+	g++ $(CXXFLAGS) src/ladder_main.cpp -o lib/ladder_main lib/ladder.o
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-origins=yes ./lib/ladder_main
 
 lib/ladder.o: src/ladder.cpp

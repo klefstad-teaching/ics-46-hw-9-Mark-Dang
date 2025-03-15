@@ -56,7 +56,6 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
 
     if (begin_word == end_word) {
         vector<string> result;
-        result.push_back(begin_word);
         return result;
     }
         
